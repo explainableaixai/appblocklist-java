@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.alphaquantum</groupId>
+  <artifactId>appblocklist</artifactId>
+  <version>1.0.0</version>
+  <packaging>jar</packaging>
+
+  <name>AppBlockList Java client</name>
+  <description>Client for the AppBlockList App Lookup API: categorize iOS and Android apps by bundle ID, App Store ID or package name for MDM app blocklists (Intune, Jamf, school devices). Keywords: mdm, app-blocklist, bundle-id, ios, android, app-categorization, intune, jamf, parental-control, school-devices, mobile-security, app-store, api-client.</description>
+  <url>https://www.appblocklist.com</url>
+
+  <licenses>
+    <license>
+      <name>MIT License</name>
+      <url>https://opensource.org/licenses/MIT</url>
+      <distribution>repo</distribution>
+    </license>
+  </licenses>
+
+  <organization>
+    <name>Alpha Quantum</name>
+    <url>https://www.appblocklist.com</url>
+  </organization>
+
+  <developers>
+    <developer>
+      <name>Alpha Quantum</name>
+      <email>info@alpha-quantum.com</email>
+      <organization>Alpha Quantum</organization>
+    </developer>
+  </developers>
+
+  <scm>
+    <url>https://github.com/explainableaixai/appblocklist-java</url>
+    <connection>scm:git:https://github.com/explainableaixai/appblocklist-java.git</connection>
+    <developerConnection>scm:git:https://github.com/explainableaixai/appblocklist-java.git</developerConnection>
+  </scm>
+
+  <issueManagement>
+    <system>Contact form</system>
+    <url>https://www.appblocklist.com/contact.php</url>
+  </issueManagement>
+
+  <properties>
+    <maven.compiler.release>11</maven.compiler.release>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <junit.version>5.10.2</junit.version>
+  </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>org.junit.jupiter</groupId>
+      <artifactId>junit-jupiter</artifactId>
+      <version>${junit.version}</version>
+      <scope>test</scope>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <version>3.13.0</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-surefire-plugin</artifactId>
+        <version>3.2.5</version>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-jar-plugin</artifactId>
+        <version>3.4.1</version>
+        <configuration>
+          <archive>
+            <manifestEntries>
+              <Automatic-Module-Name>com.alphaquantum.appblocklist</Automatic-Module-Name>
+            </manifestEntries>
+          </archive>
+        </configuration>
+      </plugin>
+    </plugins>
+  </build>
+</project>
